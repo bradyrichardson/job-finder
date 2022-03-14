@@ -3,7 +3,12 @@
     <h1>Finder</h1>
     <div class="search">
       <form class="" action="index.html" method="post">
-        <input id="queryJob" v-model="query" placeholder="Search by job title..." style="text-align: center"/>
+        <input
+          id="queryJob"
+          v-model="query"
+          placeholder="Search by job title..."
+          style="text-align: center"
+        />
       </form>
     </div>
     <div>
@@ -28,7 +33,9 @@ export default {
   },
   computed: {
     jobs() {
-      return this.$root.$data.jobs.filter(job => job.title.toLowerCase().search(this.query.toLowerCase()) >= 0);
+      return this.$root.$data.jobs.filter(
+        (job) => job.title.toLowerCase().search(this.query.toLowerCase()) >= 0
+      );
     },
   },
 };
@@ -36,7 +43,7 @@ export default {
 <style scoped>
 h1 {
   background-color: #fff;
-  color: rgba(0,0,0,.7);
+  color: rgba(0, 0, 0, 0.7);
   margin-top: 0;
 }
 .search {

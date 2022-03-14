@@ -19,9 +19,9 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -42,18 +42,18 @@ nav a {
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
-  background-color: rgba(236, 236, 236,0.5);
+  background-color: rgba(236, 236, 236, 0.5);
   padding: 10px 30px;
 }
 nav a:hover {
-  background-color: rgba(236, 236, 236,1);
+  background-color: rgba(236, 236, 236, 1);
 }
 
 nav a.router-link-exact-active {
   color: #7ea4b3;
 }
 footer {
-  background-color: rgba(236, 236, 236,1);
+  background-color: rgba(236, 236, 236, 1);
   display: flex;
   justify-content: center;
   align-items: center;

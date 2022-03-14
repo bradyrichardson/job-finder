@@ -13,7 +13,6 @@
               <div class="job-city">
                 {{ job.city }}
               </div>
-
             </button>
             <div class="dropdown-info" v-if="job.detail === true">
               <div class="dropdown-info-details">
@@ -25,7 +24,10 @@
                 </ul>
               </div>
               <div>
-                <button class="show-button" @click.prevent="showJob(job.latitude, job.longitude)">
+                <button
+                  class="show-button"
+                  @click.prevent="showJob(job.latitude, job.longitude)"
+                >
                   Show
                 </button>
               </div>
@@ -44,10 +46,10 @@ export default {
   },
   methods: {
     toggleDetails(id) {
-      if (this.$root.$data.jobs.find(job => job.id === id).detail === false) {
-        this.$root.$data.jobs.find(job => job.id === id).detail = true;
+      if (this.$root.$data.jobs.find((job) => job.id === id).detail === false) {
+        this.$root.$data.jobs.find((job) => job.id === id).detail = true;
       } else {
-        this.$root.$data.jobs.find(job => job.id === id).detail = false;
+        this.$root.$data.jobs.find((job) => job.id === id).detail = false;
       }
     },
     showJob(lat, long) {
@@ -88,7 +90,7 @@ export default {
   height: 60px;
   width: 80px;
   margin-left: 20px;
-  background-color: rgba(0,0,255,0.5);;
+  background-color: rgba(0, 0, 255, 0.5);
   color: #fff;
   border-radius: 5px;
   border-style: none;
@@ -97,10 +99,10 @@ export default {
   border: solid black 1px;
 }
 .show-button:hover {
-  background-color: rgba(0,0,255,0.3);
+  background-color: rgba(0, 0, 255, 0.3);
 }
 .show-button:active {
-  background-color:  rgba(0,0,255,0.7);
+  background-color: rgba(0, 0, 255, 0.7);
 }
 .dropdown-info {
   display: flex;

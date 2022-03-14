@@ -1,35 +1,24 @@
 <template>
-<div class="wrapper">
-  <div>
-    <div class="marked-jobs" v-for="job in markedJobs" :key="job.id">
-      <div class="job">
-        <div>
-          Title: {{ job.title }}
+  <div class="wrapper">
+    <div>
+      <div class="marked-jobs" v-for="job in markedJobs" :key="job.id">
+        <div class="job">
+          <div>Title: {{ job.title }}</div>
+          <div>Salary: ${{ job.salary }}.00</div>
+          <div>Company: {{ job.company }}</div>
+          <div>Email: {{ job.email }}</div>
+          <div>Phone: {{ job.phone }}</div>
+          <div>
+            Location: {{ job.city }}, {{ job.state }}
+            <hr />
+          </div>
         </div>
-        <div>
-          Salary: ${{ job.salary }}.00
+        <div class="remove-div">
+          <button @click="removeJob(job.id)">Remove</button>
         </div>
-        <div>
-          Company: {{ job.company }}
-        </div>
-        <div>
-          Email: {{ job.email }}
-        </div>
-        <div>
-          Phone: {{ job.phone }}
-        </div>
-        <div>
-          Location: {{ job.city }}, {{ job.state }}
-          <hr />
-        </div>
-      </div>
-      <div class="remove-div">
-        <button @click="removeJob(job.id)">Remove</button>
       </div>
     </div>
   </div>
-
-</div>
 </template>
 
 <script>
@@ -39,10 +28,12 @@ export default {
   },
   methods: {
     removeJob(id) {
-        this.$root.$data.marked = this.$root.$data.marked.filter(job => job.id !== id);
+      this.$root.$data.marked = this.$root.$data.marked.filter(
+        (job) => job.id !== id
+      );
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -71,7 +62,7 @@ export default {
 button {
   width: 150px;
   height: 70px;
-  background-color: rgba(255,0,0,0.6);
+  background-color: rgba(255, 0, 0, 0.6);
   color: #fff;
   border: solid black 1px;
   font-size: 25px;
@@ -79,10 +70,10 @@ button {
   border-radius: 5px;
 }
 button:hover {
-  background-color: rgba(255,0,0,0.2);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 button:active {
-  background-color: rgba(255,0,0,0.7);
+  background-color: rgba(255, 0, 0, 0.7);
 }
 @media only screen and (min-width: 400px) {
   .marked-jobs {

@@ -26,7 +26,7 @@ export default {
 <style scoped>
 h1 {
   background-color: #fff;
-  color: rgba(0,0,0,.7);
+  color: rgba(0, 0, 0, 0.7);
   margin-top: 0;
 }
 .empty {

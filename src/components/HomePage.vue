@@ -13,7 +13,6 @@
               <div class="job-city">
                 {{ job.city }}
               </div>
-
             </button>
             <div class="dropdown-info" v-if="job.detail === true">
               <div class="dropdown-info-details">
@@ -44,18 +43,18 @@ export default {
   },
   methods: {
     toggleDetails(id) {
-      if (this.$root.$data.jobs.find(job => job.id === id).detail === false) {
-        this.$root.$data.jobs.find(job => job.id === id).detail = true;
+      if (this.$root.$data.jobs.find((job) => job.id === id).detail === false) {
+        this.$root.$data.jobs.find((job) => job.id === id).detail = true;
       } else {
-        this.$root.$data.jobs.find(job => job.id === id).detail = false;
+        this.$root.$data.jobs.find((job) => job.id === id).detail = false;
       }
     },
     markJob(id) {
-      if (!this.$root.$data.marked.find(job => job.id === id)) {
-        var job = this.$root.$data.jobs.find(job => job.id === id);
+      if (!this.$root.$data.marked.find((job) => job.id === id)) {
+        var job = this.$root.$data.jobs.find((job) => job.id === id);
         this.$root.$data.marked.push(job);
       }
-    }
+    },
   },
 };
 </script>
@@ -102,7 +101,7 @@ export default {
   background-color: #90ee90;
 }
 .add-button:active {
-  background-color:  #006400;
+  background-color: #006400;
 }
 .dropdown-info {
   display: flex;
